@@ -23,12 +23,12 @@ interface FoldableFunctions {
 
   fun <F> fold(strKind: Kind<F, String>, FO: Foldable<F>): String =
     with(FO) {
-      strKind.fold(String.monoid())
+      "str: " + strKind.fold(String.monoid())
     }
 
   fun <F> combineAll(strKind: Kind<F, String>, FO: Foldable<F>): String =
     with(FO) {
-      strKind.combineAll(String.monoid())
+      "str: " + strKind.combineAll(String.monoid())
     }
 
   fun <F> reduceLeftToOption(strKind: Kind<F, String>, FO: Foldable<F>): Option<Int> =
